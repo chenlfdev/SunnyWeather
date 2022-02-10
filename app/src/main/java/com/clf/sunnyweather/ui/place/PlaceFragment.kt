@@ -39,6 +39,7 @@ class PlaceFragment:Fragment() {
             }
             startActivity(intent)
             activity?.finish()
+
             return
         }
         val layoutManager = LinearLayoutManager(activity)
