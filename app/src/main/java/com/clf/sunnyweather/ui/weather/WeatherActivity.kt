@@ -106,11 +106,14 @@ class WeatherActivity : AppCompatActivity() {
             val temperatureInfo = view.findViewById(R.id.temperatureInfo) as TextView
             val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
             dateInfo.text = simpleDateFormat.format(skycon.date)
+            dateInfo.setTextColor(Color.WHITE)
             val sky = getSky(skycon.value)
             skyIcon.setImageResource(sky.icon)
             skyInfo.text = sky.info
+            skyInfo.setTextColor(Color.WHITE)
             val tempText = "${temperature.min.toInt()} ~ ${temperature.max.toInt()} ℃"
             temperatureInfo.text = tempText
+            temperatureInfo.setTextColor(Color.WHITE)
             forecastLayout.addView(view)
         }
         // 填充life_index.xml布局中的数据
